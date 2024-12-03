@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="description" content="PLEASE ADD A DESCRIPTION"> -->
     <title>Data - Boosted Boops Boops</title>
-    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 40px; /* More space between items */
+            padding: 40px;
+        }
+        .grid-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item img {
+            width: 100%; /* Image will take up the entire width of its container */
+            max-width: 600px; /* Limit the maximum width for larger screens */
+            height: auto;
+            border-radius: 12px; /* Slightly rounded corners */
+            margin-bottom: 20px; /* Space below the image */
+        }
+        .grid-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .grid-item p {
+            margin: 10px 0 20px; /* Space below the paragraph */
+            font-size: 1rem;
+            color: #555;
+        }
+        .grid-item ul {
+            margin: 0;
+            padding-left: 20px;
+            text-align: left;
+            list-style-type: disc; /* Standard bullet points */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,14 +70,67 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Cameron Johnson is in charge of this! DO NOT TOUCH!!!</h1>
-            <p>Thanks!</p>
-        </section>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img 
+                    src="static/images/data-images/dumb.jpeg" 
+                    alt="Banner"
+                />
+                <h3>Data Point 1</h3>
+                <p>
+                  Step into a world of serene beauty where nature reveals its most tranquil moments. Picture a peaceful meadow, the soft rustle of leaves in the wind, and the quiet hum of life surrounding you. These encounters are a gentle reminder of the simplicity and stillness that nature offers.
+                </p>
+                <ul>
+                    <li>Experience tranquility in the wild</li>
+                    <li>Observe animals in their natural habitat</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img 
+                    src="static/images/data-images/dumb.jpeg" 
+                    alt="Cow near the river"
+                />
+                <h3>Data Point 2</h3>
+                <p>
+                  Nature's choreography comes alive as deer glide gracefully through the forest. Their movement is a testament to the adaptability and harmony found in the wild. Every stride, pause, and glance tells a story of survival and beauty, inviting us to observe and learn from their instincts.                </p>
+                <ul>
+                    <li>See cows grazing peacefully</li>
+                    <li>Capture serene riverbank moments</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img 
+                    src="static/images/data-images/dumb.jpeg" 
+                    alt="Deer in the wild"
+                />
+                <h3>Data Point 3</h3>
+                <p>
+                  The interplay of land, water, and sky forms a breathtaking tapestry of harmony. From lush greenery to shimmering waters, every element complements the other. This balance reminds us of the importance of preserving nature's delicate equilibrium for future generations.
+                </p>
+                <ul>
+                    <li>Spot graceful deer in action</li>
+                    <li>Enjoy the beauty of wildlife</li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <img 
+                    src="static/images/data-images/dumb.jpeg" 
+                    alt="Peaceful river scene"
+                />
+                <h3>Data Point 4</h3>
+                <p>
+                  The interplay of land, water, and sky forms a breathtaking tapestry of harmony. From lush greenery to shimmering waters, every element complements the other. This balance reminds us of the importance of preserving nature's delicate equilibrium for future generations.
+                </p>
+                <ul>
+                    <li>Marvel at tranquil landscapes</li>
+                    <li>Reconnect with nature's beauty</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 Boosted Boops Boops</p>
     </footer>
-    <script src="static\js\scripts.js"></script>
+    <script src="static/js/scripts.js"></script>
 </body>
 </html>
