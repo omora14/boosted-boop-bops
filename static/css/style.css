@@ -136,16 +136,76 @@ p {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 1em;
     }
-
+    
     .nav-list.active {
         display: flex;
     }
-
+    
     .nav-list li {
         margin: 0.5em 0;
     }
-
+    
     .menu-toggle {
         display: flex;
     }
+}
+/*Home Page */
+main {
+    flex: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    gap: 2em; /* Add space between sections */
+}
+/* Hero image and message*/
+h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 55 px;
+}
+#hero {
+    display: flex;
+    align-items: center;
+}
+
+/* Centering the accordion */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  margin-bottom: 0; /* Space between accordion and the quote section */
+}
+
+.accordion {
+  width: 80%; /* Adjust the width of the accordion */
+  max-width: 600px; /* Prevent it from being too wide */
+  margin: 0.5em 0; /* Add spacing between buttons */
+}
+
+/* quote section */
+.quote-section {
+  text-align: center;
+  
+}
+
+.quote-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  color: #333;
+}
+
+/* Aligning images in a row */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 5em; /* Space between images */
+}
+
+.smallpics {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* makes images round */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  object-fit: cover;
 }
