@@ -7,11 +7,9 @@
     <title>Home - Boosted Boops Boops</title>
     <link rel="stylesheet" href="static\css\style.css" />
     <script src="accordian.js" defer></script>
-    <link>
-      rel="icon"
-      href="static\images\favicon-temp.ico"
-      type="image/x-icon"
-   <link/>
+    <link />
+   
+    <link />
   </head>
   <body>
     <header>
@@ -28,14 +26,39 @@
         </div>
       </nav>
     </header>
-    
-    <main>
-      <img class="couples" src="https://picsum.photos/400/400" alt="home_image_dating">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis neque dolorem facilis aperiam consectetur ipsa deleniti repellendus voluptatum harum in odit quaerat quibusdam minima, sunt excepturi maxime perferendis eligendi dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nesciunt! Possimus iusto dolor culpa, alias, ea illo eos deleniti reprehenderit obcaecati corporis harum, voluptate voluptatum. Aspernatur sed praesentium dolor voluptas.</p>
-      
-    </main>
 
-  
+    <main>
+      <img
+        class="couples"
+        src="https://picsum.photos/400/400"
+        alt="home_image_dating"
+      />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis neque
+        dolorem facilis aperiam consectetur ipsa deleniti repellendus voluptatum
+        harum in odit quaerat quibusdam minima, sunt excepturi maxime
+        perferendis eligendi dolorum? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Quae, nesciunt! Possimus iusto dolor culpa, alias, ea
+        illo eos deleniti reprehenderit obcaecati corporis harum, voluptate
+        voluptatum. Aspernatur sed praesentium dolor voluptas.
+      </p>
+     <script>
+      var acc = document.getElementsByClassName("accordion");
+       var i; 
+       for (i = 0;i < acc.length; i++) 
+       { acc[i].addEventListener("click", function() { 
+         this.classList.toggle("active"); 
+         var panel =this.nextElementSibling; 
+         if (panel.style.display === "block") {
+          panel.style.display = "none"; }
+           else { 
+            panel.style.display = "block"; 
+          }
+        }); 
+      }
+        </script>
+      </main>
+
     <footer>
       <p>&copy; 2023 Boosted Boops Boops</p>
     </footer>
