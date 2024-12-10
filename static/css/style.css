@@ -227,3 +227,17 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   object-fit: cover;
 }
+
+
+/* Adding +/- symbol to accordion*/
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
