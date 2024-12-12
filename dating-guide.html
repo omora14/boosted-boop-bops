@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta name="description" content="PLEASE ADD A DESCRIPTION"> -->
     <title>Dating Guide - Boosted Boops Boops</title>
-    <link rel="stylesheet" href="static\css\style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <header>
-      <img src="static\images\logo.png" alt="Logo" class="logo">
         <nav>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
@@ -22,77 +20,55 @@
                 <span class="bar"></span>
             </div>
         </nav>
+        <img src="static\images\logo.png" alt="Logo" class="logo">
     </header>
     <main>
-        <div class="accordion-container">
-            <h1>Dating Guide</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta debitis quia laborum repudiandae unde possimus fugiat expedita</p>
-            <img src="https://picsum.photos/700/300">
-            <button class="accordion">Section 1</button>
-                <div class="panel">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta quam dicta voluptatem. Quaerat quidem sed nemo cupiditate delectus vitae aliquid atque commodi modi quisquam? Repudiandae explicabo voluptas earum accusantium nobis.</p>
-                </div>
-                
-                <button class="accordion">Section 2</button>
-                <div class="panel">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil tempora autem incidunt ut. Sint, impedit. Illum veniam, adipisci dolore omnis vero, enim vitae aut iste blanditiis impedit atque esse tempore!</p>
-                </div>
-                
-                <button class="accordion">Section 3</button>
-                <div class="panel">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, laboriosam atque dolorum consequatur iste ullam ab dolores inventore quos, earum cum dignissimos quam voluptas ea praesentium officia alias quaerat dolore.</p>
-                </div>
-        </div>
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("active");
-
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                panel.style.display = "none";
-                } else {
-                panel.style.display = "block";
-                }
-            });
-            } 
-        </script>
-        <style>
-            .panel {
-              padding: 0 18px;
-              background-color: white;
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.2s ease-out;
-            }
-        </style>
-            
-        <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-            
-            for (i = 0; i < acc.length; i++) {
-              acc[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                  panel.style.maxHeight = null;
-                } else {
-                  panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-              });
-            }
-        </script>
+        <div class="container">
+          <h1>Dating Guide</h1>
+          <p>Welcome to the ultimate dating guide. Here you'll find tips and advice to help you navigate the world of dating. For more detailed information, check out our <a href="data.html">data page</a>.</p>
+          <img src="https://picsum.photos/700/300" alt="Dating Image" class="main-image">
+          
+          <div class="accordion-container">
+              <button class="accordion-guide">First Date Tips</button>
+              <div class="panel">
+                  <p>First dates can be nerve-wracking. Here are some tips to help you make a great first impression...</p>
+              </div>
+              
+              <button class="accordion-guide">Conversation Starters</button>
+              <div class="panel">
+                  <p>Struggling to find something to talk about? Here are some conversation starters to keep the dialogue flowing...</p>
+              </div>
+              
+              <button class="accordion-guide">What to Wear</button>
+              <div class="panel">
+                  <p>Choosing the right outfit can boost your confidence. Here are some fashion tips for your date...</p>
+              </div>
+              
+              <button class="accordion-guide">Dating Safety</button>
+              <div class="panel">
+                  <p>Your safety is important. Here are some tips to ensure you stay safe while dating...</p>
+              </div>
+          </div>
     </main>
     <footer>
-        <p>&copy; 2023 Boosted Boops Boops</p>
+        <p>&copy; Boosted Boops Boops. All rights reserved.</p>
     </footer>
-    <script src="static\js\scripts.js"></script>
+    <script>
+      // Accordion functionality
+      var acc = document.getElementsByClassName("accordion-guide");
+      for (var i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                  panel.style.display = "none";
+              } else {
+                  panel.style.display = "block";
+              }
+          });
+      }
+  </script>
+  <script src="static\js\scripts.js"></script>
+
 </body>
 </html>
