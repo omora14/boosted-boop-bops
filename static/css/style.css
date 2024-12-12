@@ -215,8 +215,8 @@ h1 {
 
 
 .accordion {
-    background-color: #028090;
-    color: #114b5f;
+    background-color: #154349;
+    color: #154349;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -287,8 +287,8 @@ h1 {
 }
 
 .accordion-guide {
-    background-color: #E4FDE1;
-    color: #333;
+    background-color: #154349;
+    color: #000;
     cursor: pointer;
     padding: 1em;
     width: 100%;
