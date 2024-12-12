@@ -9,52 +9,102 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background-color: #e4fde1; /* Light green */
         }
+
         .carousel-container {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 40px;
+            flex-direction: row;
+            position: relative;
         }
+
         .graph-section {
             display: flex;
             align-items: flex-start;
-            max-width: 900px;
+            max-width: 1100px;
             gap: 20px;
         }
+
         .graph {
             flex: 1;
             text-align: center;
         }
+
         .graph img {
             width: 100%;
-            max-width: 400px;
-            max-height: 250px;
+            max-width: 500px;
+            max-height: 400px;
             height: auto;
             border-radius: 12px;
         }
+
         .details {
             flex: 1;
             text-align: left;
         }
+
         .details h3 {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             color: #333;
             margin-bottom: 10px;
         }
+
         .details p {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             color: #555;
             margin-bottom: 0px;
             text-align: left;
             margin-left: 1.5em;
         }
+
         .arrow {
-            padding: 40px;
             font-size: 2rem;
             cursor: pointer;
             user-select: none;
             font-family: 'Courier New', Courier, monospace;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            padding: 10px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #prev {
+            left: 20px;
+        }
+
+        #next {
+            right: 20px;
+        }
+
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+            position: absolute;
+            bottom: -30px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #bbb;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border: none;
+        }
+
+        .dot.active {
+            background-color: #333;
         }
     </style>
 </head>
@@ -74,8 +124,7 @@
         </nav>
     </header>
     <main>
-        </ul>
-        <h1 style="font-size: 5rem; color: #333;">THE DATA THAT WE GATHERED</h1>
+        <h1 style="font-size: 5rem; color: #333; text-align: center;">THE DATA THAT WE GATHERED</h1>
         <div class="carousel-container">
             <span class="arrow" id="prev">&lt;</span>
             <div class="graph-section" id="carousel">
@@ -88,12 +137,15 @@
                 </div>
             </div>
             <span class="arrow" id="next">&gt;</span>
+            <div class="dots-container" id="dots-container">
+            </div>
         </div>
-    </main>    
+    </main>
 
     <footer>
         <p>&copy; 2023 Boosted Boops Boops</p>
     </footer>
+
     <script>
         const dataPoints = [
             {
@@ -118,7 +170,7 @@
             },
             {
                 img: "static/images/data-images/kiss.png",
-                title: "Should I kiss on the first date?",
+                title: "Kiss on the first date?",
                 description: "There is significant evidence to support that women and men disagree on this issue. Women almost unanimously disagree, and men are almost unanimously neutral or agree. Guys, read the room but probably don’t go for it on the first date."
             }
         ];
@@ -128,6 +180,7 @@
         const graph = document.querySelector(".graph img");
         const title = document.querySelector(".details h3");
         const description = document.querySelector(".details p");
+        const dotsContainer = document.getElementById("dots-container");
 
         function updateCarousel() {
             const data = dataPoints[currentIndex];
@@ -135,6 +188,25 @@
             graph.alt = data.title;
             title.textContent = data.title;
             description.textContent = data.description;
+
+            // Update dots
+            const dots = document.querySelectorAll(".dot");
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentIndex);
+            });
+        }
+
+        function createDots() {
+            dataPoints.forEach((_, index) => {
+                const dot = document.createElement("div");
+                dot.classList.add("dot");
+                if (index === 0) dot.classList.add("active");
+                dot.addEventListener("click", () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+                dotsContainer.appendChild(dot);
+            });
         }
 
         document.getElementById("prev").addEventListener("click", () => {
@@ -146,6 +218,9 @@
             currentIndex = (currentIndex + 1) % dataPoints.length;
             updateCarousel();
         });
+
+        createDots();
+        updateCarousel();
     </script>
 </body>
-</html>
+</html> 
