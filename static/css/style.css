@@ -1,6 +1,8 @@
 /* General Styles */
-@media screen and (max-width: 900px)
-* {
+@media (max-width: 768px) {
+    body { font-size: 16px; }
+  }
+main {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -176,7 +178,7 @@ h1 {
 }
 .couples {
     width: 800px;
-    height 400px;
+    height: 400px;
 
 }
 
@@ -218,7 +220,6 @@ h1 {
   margin-bottom: 1em;
   color: #456990;
   font-family: 'quicksand';
-  
 }
 
 /* Aligning images in a row */
