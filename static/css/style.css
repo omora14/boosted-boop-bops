@@ -14,24 +14,50 @@ body {
     color: #333;
 }
 
-/* Header and Footer Styles */
-header, footer {
-    background-color: #333;
-    color: #fff;
+/* Header Styles */
+header {
+    background-color: #E4FDE1;
+    color: #333;
     text-align: center;
-    padding: 1em 0;
+    padding: 1em 2em; /* Adjust the padding to space out content */
     position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     z-index: 1000;
 }
 
-header {
-    top: 0;
+header .logo {
+    max-width: 150px; /* Limit the logo size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the logo is a block element */
+    margin: 0; /* Remove unnecessary margins */
 }
 
 footer {
+    background-color: #E4FDE1;
+    color: #333;
+    text-align: center;
+    padding: 1em 0;
+    position: sticky;
     bottom: 0;
     margin-top: auto;
+    width: 100%;
+}
+
+/* Responsive Styles for Header */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack the elements vertically for smaller screens */
+        align-items: center; /* Center the logo and other elements */
+        padding: 1em; /* Adjust padding for smaller screens */
+    }
+
+    header .logo {
+        max-width: 120px; /* Make the logo slightly smaller on mobile */
+    }
 }
 
 /* Navigation Styles */
@@ -53,7 +79,7 @@ nav {
 }
 
 .nav-list li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -75,7 +101,7 @@ nav {
 .menu-toggle .bar {
     height: 3px;
     width: 25px;
-    background-color: #fff;
+    background-color: #000;
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -209,7 +235,6 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   object-fit: cover;
 }
-
 
 /* Adding +/- symbol to accordion*/
 .accordion:after {
