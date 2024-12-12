@@ -1,5 +1,3 @@
-/* General Styles */
-@media screen and (max-width: 900px)
 * {
     margin: 0;
     padding: 0;
@@ -287,10 +285,6 @@ h1 {
     width: 100%;
     height: auto;
     margin: 1em 0;
-}
-
-.accordion-container {
-    margin-top: 2em;
 }
 
 .accordion-guide {
