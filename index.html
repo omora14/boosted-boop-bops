@@ -1,100 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <meta name="description" content="PLEASE ADD A DESCRIPTION"> -->
-    <title>Home</title>
-    <link rel="stylesheet" href="static/css/style.css" />
-    <script src="accordian.js" defer></script>
-    <link />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boosted Boops Boops - Home</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
     <header>
-      <img src="static/images/logo.png" alt="Logo" class="logo" />
-      <nav>
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="data.html">Data</a></li>
-          <li><a href="dating-guide.html">Dating Guide</a></li>
-        </ul>
-        <div class="menu-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="dating-guide.html">Dating Guide</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <img src="static/images/logo.png" alt="Logo" class="logo">
     </header>
 
     <div id="hero">
-      <img
-        class="couples"
-        src="static/images/date4.png"
-        alt="home_image_dating"
-      />
-      <div>
-        <h1>
-          We know that dating is hard! We surveyed BYUI students, both male and female to be able to give you the best data. 
-          There are always exceptions, however, this is the data we gathered.
-        </h1>
-      </div>
+        <img class="couples" src="static/images/date4.png" alt="home_image_dating" />
+        <div>
+            <h1>
+                We know that dating is hard! We surveyed BYUI students, both male and female to be able to give you the best data. 
+                There are always exceptions, however, this is the data we gathered.
+            </h1>
+        </div>
     </div>
 
     <main class="index-grid">
-      <div class="accordion-container">
-        <button class="accordion">Preparation</button>
-        <div class="panel">
-          <p>Good Hygiene</p>
-          <p>Kind Humor</p>
-          <p>Confidence</p>
+        <div class="accordion-container">
+            <button class="accordion-guide">Preparation</button>
+            <div class="panel">
+                <p>Good Hygiene</p>
+                <p>Kind Humor</p>
+                <p>Confidence</p>
+            </div>
+        
+            <button class="accordion-guide">Execution</button>
+            <div class="panel">
+                <p>Planning</p>
+                <p>Punctuality</p>
+                <p>Flirting</p>
+                <p>Joking/Teasing</p>
+            </div>
         </div>
-    
-        <button class="accordion">Execution</button>
-        <div class="panel">
-          <p>Planning</p>
-          <p>Punctuality</p>
-          <p>Flirting</p>
-          <p>Joking/Teasing</p>
-        </div>
-      </div>
-    
-      <style>
-        .panel {
-          padding: 0 18px;
-          background-color: white;
-          max-height: 0;
-          overflow: hidden;
-          transition: max-height 0.2s ease-out;
-        }
-      </style>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var acc = document.getElementsByClassName("accordion");
-          for (var i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var panel = this.nextElementSibling;
-              panel.style.maxHeight = panel.style.maxHeight ? null : `${panel.scrollHeight}px`;
-            });
-          }
-        });
-      </script>
-
-      <div class="quote-section">
-        <h2>"Love isn't about finding someone perfect; it's about finding someone perfectly real. Every swipe, every chat, every moment could be the start of something extraordinary. Take a chance — your next great connection is closer than you think." </h2>
-        <div class="image-row">
-          <img class="smallpics" src="static/images/date1.png" alt="home_image_small" />
-          <img class="smallpics" src="static/images/date2.png" alt="home_image_small" />
-          <img class="smallpics" src="static/images/date3.png" alt="home_image_small" />
-        </div>
-      </div>
     </main>
 
     <footer>
-      <p>&copy; 2023 Boosted Boops Boops</p>
+        <p>&copy; Boosted Boops Boops. All rights reserved.</p>
     </footer>
 
-    <script src="static/js/scripts.js"></script>
-  </body>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        // Accordion functionality
+        var acc = document.getElementsByClassName("accordion-guide");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
 </html>
