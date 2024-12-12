@@ -159,6 +159,7 @@ main {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center elements horizontally */
     gap: 2em; /* Add space between sections */
+    background-color: #e4fde1;
 }
 /* Hero image and message*/
 h1 {
@@ -171,6 +172,12 @@ h1 {
 #hero {
     display: flex;
     align-items: center;
+    background-color: #e4fde1;
+}
+.couples {
+    width: 800px;
+    height 400px;
+
 }
 
 /* Centering the accordion */
@@ -188,8 +195,8 @@ h1 {
     color: #114b5f;
     cursor: pointer;
     padding: 18px;
-    width: 98%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 800px;
     text-align: center;
     border: none;
     outline: none;
@@ -211,6 +218,7 @@ h1 {
   margin-bottom: 1em;
   color: #456990;
   font-family: 'quicksand';
+  
 }
 
 /* Aligning images in a row */
